@@ -1,0 +1,43 @@
+#header {
+    background-color:bisque;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+
+#nav {
+    float: left;
+    max-width: 100px;
+    margin: 0;
+	line-height:30px;
+}
+
+#nav ul {
+    list-style-type: none;
+    padding: 5px;
+}
+			
+#nav ul a {
+    text-decoration: none;
+}
+#RegistrationDetails{
+	
+	top: 245px;
+	left: 200px;
+    height:455px;
+}
+#RegistrationDetails{
+
+	top: 145px;
+	float:left;
+	padding:10px 25px;
+
+}
+#footer {
+    background-color:bisque;
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px;
+	bottom:255px;
+}

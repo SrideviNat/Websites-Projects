@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang= "en">
+	<head>
+		<title>Register/Sign-up</title>
+		<meta chrset="utf-8">
+        <link rel="stylesheet" type="text/css" href="register.css">
+		<script type="text/javascript" src = "register.js" ></script>
+        
+        <script>
+		function getCurrentDate() {
+				var currentDate = new Date();
+				var year = currentDate.getFullYear();
+				var month = currentDate.getMonth();
+				var day = currentDate.getDay();
+				
+				var theDay = currentDate.getDate();
+				if (theDay<10){
+				theDay = "0" + theDay;
+				}
+				var weekDays=new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+				var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+				
+				return(weekDays[day]+", "+ months[month]+" "+theDay+", "+year+"</b>");
+				
+                }
+		
+                var interval = setInterval(time, 1000);
+                function time() {
+				var d = new Date();
+				document.getElementById("time").innerHTML = d.toLocaleTimeString();
+		}
+       
+		</script>
+	</head>
+    <body onload="myTime()">
+
+		<div id="header">
+			<h1>Sridevi Tours</h1>
+			<span id="date_time"></span>
+            <div id="date"> </div>
+            <script>document.getElementById("date").innerHTML = getCurrentDate();</script>
+            <div id="time"> </div>
+         
+		</div>
+
+		<div id="nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">My cart</a></li>
+				<li><a href="register.html">Register</a></li>
+				<li><a href="#">Bus Tours</a></li>
+			</ul>
+		</div>
+
+<div Id = "RegistrationDetails">
+	
+	<h2> Registration/Sign-Up</h2>
+ <form action="" name="myForm" onsubmit="return(validate());">
+    <table cellspacing="2" cellpadding="2" border="1">
+
+            <tr>
+               <td align="right">First Name</td>
+               <td><input type="text" name="FirName" /></td>
+            </tr>
+            <tr>
+               <td align="right">Last Name</td>
+               <td><input type="text" name="LastName" /></td>
+            </tr>
+            <tr>
+               <td align="right">E-Mail</td>
+               <td><input type="text" name="EMail" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Phone Number</td>
+               <td><input type="text" name="PhoneNum" /></td>
+            </tr>
+            
+           <tr>
+               <td align="right">Password</td>
+               <td><input type="text" name="Pswrd" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right">Confirm Password</td>
+               <td><input type="text" name="confirmPswrd" /></td>
+            </tr>
+            
+            <tr>
+               <td align="right"></td>
+               <th><input type="submit" value="Submit" /></th>  
+            </tr>
+         </table>
+     </form> 
+</div>
+
+ <div id="footer">
+
+Copyright &copy; 2016 Sridevi Tours. All rights reserved.<br/>
+            Legal/Contact Us/About us.
+
+</div>
+
+	</body>
+</html>
