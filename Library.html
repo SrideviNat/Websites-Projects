@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Bookstore</title>
+    <meta charset = "utf-8" />
+	<style>
+	body{
+		background-color: mediumaquamarine;
+	    }
+	
+	h1{
+		color: black;
+		font-family: verdana;
+		font-size:200%;
+	  }
+	 
+	h3{
+		color:black;
+		font-family:courier;
+		font-size: 95%;
+	
+	  }
+	
+	</style>
+	
+</head>
+<body>
+    <h1>WELCOME TO SRIDEVI BOOKSTORE</h1>
+    <h3> Free Shipping for all orders above $35</h3>
+
+
+    <h4>Please select the text-book that you are willing to order:</h4>
+	
+<!-- Menu to select the desired textbook-->
+
+    
+<form action = "">
+      <p>
+        <label>Text-Books: 
+          <select name = "textbooks">
+		    
+			<option> "Absolute Java" by Walter Savitch </option>
+            <option> "Introduction to Administration" by Blaze Pascal </option>
+            <option> "World Religions" by Amir Hussain </option>   
+			<option> "Python Programming" by John Zeele </option>
+            <option> "Concrete Mathematics" by Seema Bhatnagar </option>
+            <option> "Structure and Interpretation" by Gerald Jay </option>   
+			<option> "Foundation of Computer Science" by Vladimir Zwass </option>
+            <option> "Pratical Programming" by Laraz Wood </option>
+          
+		  </select>
+        </label>
+      </p>
+    
+
+ <h4>Shipping Information:</h4>
+ 
+ <p>
+<!-- Textboxes for name and address -->
+
+      <label> Name: &nbsp;
+      <input type = "text"  name = "name" 
+                     size = "30" /> </label>
+      <br /><br />
+      <label> Street Address: &nbsp;
+      <input type = "text"  name = "street"  
+                     size = "30" /> </label>
+      <br /><br />
+      <label> City, State:
+      <input type = "text"  name = "city"  
+                     size = "30" /> </label>
+       <br /><br />
+      <label> Zip:
+      <input type = "text"  name = "Zip"  
+                     size = "30" /> 
+	</label>
+	 <br /><br />
+  </p>
+ 
+
+ <!-- Radio buttons for the payment method -->
+      
+      <h4> Payment Information: </h4>
+    
+      <p>
+        <label> <input type = "radio"  name = "payment"  
+                       value = "Master Card" /> Master Card 
+        </label> 
+        <br /> <br />
+        <label> <input type = "radio"  name = "payment"  
+                       value = "American Express" /> American Express
+        </label> 
+        <br /> <br />
+       
+        <label> <input type = "radio"  name = "payment"  
+                       value = "Visa" /> Visa
+        </label> 
+        <br />  <br />
+      </p>
+
+	
+
+ <h5>Credit Card Information:</h5>
+ 
+ <p>
+<!-- Textboxes for Credit card information -->
+
+      <label> Card Number:  &nbsp;
+      <input type = "text"  name = "number" 
+                     size = "35" /> </label>
+      <br /> <br />
+      <label> Expiry Date:  &nbsp;
+      <input type = "text"  name = "date"  
+                     size = "30" /> </label>
+      <br /> <br />
+      <label> Pin Number:   &nbsp;
+      <input type = "text"  name = "number"  
+                     size = "30" /> 
+	  </label>
+	  <br /> <br />
+      
+  </p>  
+	  
+<!-- The submit and reset buttons -->
+
+      <p>
+        <input type = "submit"  value = "Submit Order" />
+        <input type = "reset"  value = " Order Form" />
+      </p>
+    </form>
+  </body>
+</html>
