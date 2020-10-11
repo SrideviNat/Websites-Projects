@@ -1,0 +1,152 @@
+#header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+#nav {
+	max-width: 100px;
+	margin: 0;
+	line-height: 30px;
+	display: inline;
+	text-align: center;
+}
+
+#nav ul {
+	list-style-type: none;
+	padding: 5px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	
+}
+
+#nav ul a {
+	text-decoration: none;
+	color: white;
+	padding: 14px 16px;
+	
+}
+
+#nav ul li {
+    display: inline;
+}
+
+li {
+  float: center;
+  border-right:1px solid #bbb;
+}
+
+
+
+li a:hover:not(.active) {
+  background-color: #333;
+  color: black;
+}
+
+.active {
+  background-color: gray;
+}
+
+
+
+
+#first {
+	/*background-color: blue;*/
+	text-align: center;
+}
+
+#second {
+	/*background-color: yellow;*/
+	text-align: center;
+}
+
+#footer {
+	background-color: black;
+	color: white;
+	clear: both;
+	text-align: center;
+	padding: 50px;
+}
+
+#selector {
+	float: right
+}
+
+form.contact{
+	text-align: center;
+	display: flex;
+}
+
+
+#box1{
+	text-align: center;
+	background-color: red;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#box2{
+	text-align: center;
+	background-color: orange;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#box3{
+	text-align: center;
+	background-color: yellow;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#box4{
+	text-align: center;
+	background-color: green;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#box5{
+	text-align: center;
+	background-color: blue;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#box6{
+	text-align: center;
+	background-color: purple;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	/*display: flex;*/
+}
+
+#content{
+	text-align: center;
+}
+
+.error{
+	color: red;
+}
+
+#div1 {
+  text-align: center;
+  width: 314px;
+  height: 260px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}

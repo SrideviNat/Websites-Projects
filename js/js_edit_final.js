@@ -1,0 +1,166 @@
+window.addEventListener("load", init);
+
+var item1counter = 0;
+var item2counter = 0;
+var item3counter = 0;
+var item4counter = 0;
+var item5counter = 0;
+var item6counter = 0;
+
+function init()
+{
+    document.getElementById("box1").addEventListener("click", box1_click);
+	document.getElementById("box2").addEventListener("click", box2_click);
+	document.getElementById("box3").addEventListener("click", box3_click);
+	document.getElementById("box4").addEventListener("click", box4_click);
+	document.getElementById("box5").addEventListener("click", box5_click);
+	document.getElementById("box6").addEventListener("click", box6_click);
+	document.getElementById("imgbox1").addEventListener("dragstart", box1_dragstart);
+    document.getElementById("imgbox1").setAttribute("draggable", "true");
+
+}
+
+//<!-- dragable images -->
+function imgbox1_dragstart(evt)
+{
+	evt.dataTransfer.setData("img", );
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+//<!-- This would point out the time and date -->
+	function getCurrentDate() {
+		var currentDate = new Date();
+		var year = currentDate.getFullYear();
+		var month = currentDate.getMonth();
+		var day = currentDate.getDay();
+
+		var theDay = currentDate.getDate();
+		if (theDay < 10) {
+			theDay = "0" + theDay;
+		}
+		var weekDays = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday',
+				'Thursday', 'Friday', 'Saturday');
+		var months = new Array('January', 'February', 'March', 'April', 'May',
+				'June', 'July', 'August', 'September', 'October', 'November',
+				'December');
+
+		return (weekDays[day] + ", " + months[month] + " " + theDay + ", "
+				+ year + "</b>");
+
+	}
+
+	var interval = setInterval(time, 1000);
+	function time() {
+		var d = new Date();
+		document.getElementById("time").innerHTML = d.toLocaleTimeString();
+	}
+
+//<!-- search bar -->
+	function showHint(str) {
+		var xhttp;
+		if (str.length == 0) { 
+			document.getElementById("txtHint").innerHTML = "";
+			return;
+		}
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("txtHint").innerHTML = this.responseText;
+			}
+		};
+	xhttp.open("GET", "gethint.php?q="+str, true);
+	xhttp.send();   
+	}
+
+	
+//<!-- my cart item counter -->
+	function box1_click(evt){
+		document.getElementById("box1").innerHTML = "<p>Count = " + item1counter + ".</p>";
+		item1counter++;
+	}
+
+	function box2_click(evt){
+		document.getElementById("box2").innerHTML = "<p>Count = " + item2counter + ".</p>";
+		item2counter++;
+	}
+	
+	function box3_click(evt){
+		document.getElementById("box3").innerHTML = "<p>Count = " + item3counter + ".</p>";
+		item3counter++;
+	}
+	
+	function box4_click(evt){
+		document.getElementById("box4").innerHTML = "<p>Count = " + item4counter + ".</p>";
+		item4counter++;
+	}
+	
+	function box5_click(evt){
+		document.getElementById("box5").innerHTML = "<p>Count = " + item5counter + ".</p>";
+		item5counter++;
+	}
+	
+	function box6_click(evt){
+		document.getElementById("box6").innerHTML = "<p>Count = " + item6counter + ".</p>";
+		item6counter++;
+	}
+	
+	
+//<!-- contact form validation -->
+function validateForm() {
+	var x = document.forms["contact"]["name"].value;
+	var y = document.forms["contact"]["email"].value;
+	var z = document.forms["contact"]["comment"].value;
+	if (x == "") {
+		alert("Name must be filled out");
+	return false;
+	}
+	if (y == "") {
+		alert("email must be filled out");
+	return false;
+	}
+	if (z == "") {
+		alert("comment must be filled out");
+	return false;
+	}
+}
+
+
+//<!-- login form validation -->
+function loginvalidateForm() {
+	var x = document.forms["contact"]["uname"].value;
+	var y = document.forms["contact"]["password"].value;
+	if (x == "") {
+		alert("User Name must be filled out");
+	return false;
+	}
+	if (y == "") {
+		alert("Password must be filled out");
+	return false;
+	}
+}
+
+
+//<!-- my cart funtion to load my cart information
+function loadDoc() {
+  var http = new XMLHttpRequest();
+  http.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("content").innerHTML = this.responseText;
+    }
+  };
+  http.open("GET", "txt/my_cart.txt", true);
+  http.send();
+}

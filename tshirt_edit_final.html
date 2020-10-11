@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-SHIRT e-store</title> 
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/tshirt_edit_final.css" />
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script src="js/js_edit_final.js" type="application/javascript"></script>
+</head>
+<!--This is the header-->
+<body onload="time()">
+
+	<div id="header">
+		<h1>T-SHIRT</h1>
+		<span id="date_time"></span>
+		<div id="date"></div>
+		<script>
+			document.getElementById("date").innerHTML = getCurrentDate();
+		</script>
+		<div id="time"></div>
+
+	</div>
+<!--Navigation Bar-->
+	<div id="nav">
+		<ul>
+			<li><a class="active" href="tshirt_edit_final.html">Shopping</a></li>
+			<li><a href="myCart_edit_final.html">My Cart</a></li>
+			<li><a href="contactUs_edit_final.html">Contact Us</a></li>
+			<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+		</ul>
+	</div>
+   
+   <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="tshirt_edit_final.html" method="post"> <!--/action_page.php-->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p> T-SHIRT </p>
+      <!--<img src="tshirt.png" alt="tshirt" class="avatar">-->
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#e0f1f7">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<!--temp search bar-->
+	<p>Suggestions: <span id="txtHint"></span></p> 
+	<p>Search T-SHIRT: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+	
+	
+	<div id="selector">
+		<form action="">
+			<p>
+				<label> Filters: <select name="Filters">
+						<option>Recommended</option>
+						<option>Price: Low to High</option>
+						<option>Price: High to Low</option>
+				</select>
+				</label>
+			</p>
+		</form>
+	</div>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+<p>drag images here</p>
+</div>
+
+	<table style="width:100%"><!--<div id="section1">  This Code is ablut the 3 shirts on the right side placed horizontal, Computer Science, Programmer, and Programmer-->
+	<tr class="section1">
+		<td id="first">
+		<h3>Computer Science</h3>
+		<img id="imgbox1" src="pic/cs.jpg" draggable="true" ondragstart="drag(event)" alt="cs"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box1"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b>19.99</b>
+		</p>
+		<p>
+			<b> Description: </b> Black Programmer Shirt, Computer Science Shirt.<br /> 
+			<b>Size:</b> S, M , L 
+		</p>
+		</td>
+		
+		<td id="second">
+		<h3>CSS Shirt</h3>
+		<img id="imgbox2" src="pic/css.jpg" draggable="true" ondragstart="drag(event)" alt="css"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box2"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b>19.99</b>
+		</p>
+		<p>
+			<b> Description: </b> Blue Programmer Shirt, CSS shirt <br /> <b>Size:</b> S, M , L 
+		</p>
+		</td>
+	</tr>
+		<td id="first">
+		<h3>Programmer</h3>
+		<img id="imgbox3" src="pic/programmer.jpg" draggable="true" ondragstart="drag(event)" alt="programmer"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box3"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b>19.99</b>
+		</p>
+		<p>
+			<b> Description: </b> Black Programmer Shirt, Programmer Definition <br /> <b>Size:</b> S, M , L 
+		</p>
+		</td>
+		
+	<!--</div>
+
+
+	<div id="section2">  This Code is ablut the 3 shirts on the left side placed horizontal, Code Liek a Girl, Trouble Maker, and !Falsel-->
+	
+		<td id="second">
+		<h3>Code Like a Girl </h3>
+		<img id="imgbox4" src="pic/girl.jpg" draggable="true" ondragstart="drag(event)" alt="girl"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box4"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b>19.99</b>
+		</p>
+		<p>
+			<b> Description: </b> Red Programmer Shirt, Code Like A Girl <br /> <b>Size:</b> S, M , l 
+			
+		</p>
+		</td>
+	<tr>
+		<td id="first">
+		<h3>!False</h3>
+		<img id="imgbox5" src="pic/joke.jpg" draggable="true" ondragstart="drag(event)" alt="joke"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box5"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b> 19.99</b>
+		</p>
+		<p>
+			<b> Description: White Programmer Shirt, !False </b>  <br /> <b>Size:</b>
+			S, M , l 
+			
+		</p>
+		</td>
+		
+		<td id="second">
+		<p>
+		<h3>Trouble Maker </h3>
+		<img id="imgbox6" src="pic/trouble.jpg" draggable="true" ondragstart="drag(event)" alt="trouble"
+			style="width: 304px; height: 200px;" border="5px"> <br />
+		<div id="box6"> <!-- button -->
+			<p>Add to cart</p>
+		</div>
+		<p>
+			<b>19.99</b>
+		</p>
+		<p>
+			<b> Description: </b> White Programmer Shirt, ; Trouble Maker <br /> <b>Size:</b> S, M , l 
+			
+		</p>
+		</td>
+		
+	</tr>
+	</table>
+
+	<!--</div> The footer, still need to add links for the Contact us/Legal/About us-->
+
+	<div id="footer">
+
+    <p> Copyright &copy 2020 T-Shirt <br /> All rights
+		reserved.<br /> Contact us/Legal/About us</p>
+	</div>
+
+</body>
+</html>

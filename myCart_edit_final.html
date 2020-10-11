@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>T-SHIRT e-store</title> 
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="css/tshirt_edit_final.css" />
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script src="js/js_edit_final.js" type="application/javascript"></script>
+</head>
+<!--This is the header-->
+<body onload="time()">
+
+	<div id="header">
+		<h1>T-SHIRT</h1>
+		<span id="date_time"></span>
+		<div id="date"></div>
+		<script>
+			document.getElementById("date").innerHTML = getCurrentDate();
+		</script>
+		<div id="time"></div>
+
+	</div>
+<!--Navigation Bar-->
+	<div id="nav">
+		<ul>
+			<li><a href="tshirt_edit_final.html">Shopping</a></li>
+			<li><a class="active" href="myCart_edit_final.html">My Cart</a></li>
+			<li><a href="contactUs_edit_final.html">Contact Us</a></li>
+			<li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+		</ul>
+	</div>
+   
+   <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="myCart_edit_final.html" method="post"> <!--/action_page.php-->
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p> T-SHIRT </p>
+      <!--<img src="tshirt.png" alt="tshirt" class="avatar">-->
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#e0f1f7">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+	<div id="content">
+	
+	
+<button type="button" onclick="loadDoc()">Change Content</button>
+
+
+	
+	
+	<p> item </p>
+	<p id="box1"></p>
+	<p id="box2"></p>
+	<p id="box3"></p>
+	<p id="box4"></p>
+	<p id="box5"></p>
+	<p id="box6"></p>
+	</div>
+	
+	<!--</div> The footer, still need to add links for the Contact us/Legal/About us-->
+
+	<div id="footer">
+
+    <p> Copyright &copy 2020 T-Shirt <br /> All rights
+		reserved.<br /> Contact us/Legal/About us</p>
+	</div>
+
+</body>
+</html>

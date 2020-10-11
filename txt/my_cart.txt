@@ -1,0 +1,1 @@
+the cart infromation should be recorded here (item_name, size, qty, price)
